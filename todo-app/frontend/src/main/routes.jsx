@@ -6,13 +6,11 @@ import About from '../about/about'
 export default class Routes extends Component {
     render(){
         return (
-            <BrowserRouter>
             <div>
-                <Route path='/' component={Todo}/>
+                <Route exact path='/' component={Todo}/>
                 <Route path='/todos' component={Todo} />
                 <Route path='/about' component={About} />
             </div>
-            </BrowserRouter>
         )
     }
 }

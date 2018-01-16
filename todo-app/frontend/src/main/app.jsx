@@ -6,11 +6,13 @@ import Todo from '../todo/todo'
 import About from '../about/about'
 import Menu from '../template/menu'
 import Routes from './routes'
+import { BrowserRouter, Route} from 'react-router-dom';
 
 export default props => (
-    <div className='container'>
-        <Menu />
-        <Routes />
-        <About />
-    </div>
+    <BrowserRouter>
+        <div className='container'>
+            <Menu />
+            <Routes />
+        </div>
+    </BrowserRouter>
 )
