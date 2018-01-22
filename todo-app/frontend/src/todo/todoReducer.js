@@ -1,10 +1,5 @@
 const INITIAL_STATE = {
-    description: 'teste',
-    list: [{
-        _id: 1,
-        description: 'teste_lista',
-        done: true
-    }]
+    description: '', list: []
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -13,6 +8,8 @@ export default (state = INITIAL_STATE, action) => {
             return {...state, description: action.payload}
         case 'TODO_SEARCH':
             return {...state, list: action.payload.data}
+        case 'TODO_CLEAR':
+            return {...state, description: ''}
         default:
             return state
     }
